@@ -1,0 +1,9 @@
+# Pip fallback for machines without uv. Matches pyproject.toml.
+# The extra-index-url below pins CUDA 13.0 wheels (this DGX Spark's setup) - on a
+# different machine, either change it to match that machine's CUDA version
+# (see https://pytorch.org/get-started/locally/) or delete the line entirely for
+# the default (CPU-only) PyTorch build.
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch
+torchvision
+ray[tune]
